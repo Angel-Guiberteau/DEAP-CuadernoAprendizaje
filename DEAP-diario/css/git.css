@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 /* Secciones de contenido */
-section#content {
+section#contenido {
     width: 80%;
     max-width: 60rem; /* Cambiado a rem */
     padding: 2rem; /* Cambiado a rem */
@@ -85,12 +85,12 @@ article p {
 }
 
 /* Estilo para comandos */
-.commands-container {
+.contenedor-comandos {
     margin-bottom: 3rem; /* Cambiado a rem */
     list-style: none; /* Añadir esto para evitar puntos en la lista */
 }
 
-.git-command {
+.comando-git {
     font-weight: bold;
     color: #00ffcc;
     background-color: #444444;
@@ -143,7 +143,7 @@ footer p {
 }
 
 /* Mensaje de copiado */
-#copyMessage {
+#mensajeCopiado {
     display: none;
     color: #00ffcc; /* Color del mensaje */
     margin-top: 1rem; /* Cambiado a rem */
@@ -164,7 +164,7 @@ footer p {
         align-items: center; /* Centra los elementos */
     }
 
-    section#content {
+    section#contenido {
         width: 90%; /* Ajusta el ancho para pantallas pequeñas */
     }
 
@@ -199,11 +199,11 @@ footer p {
         padding: 0.3rem 0.7rem; /* Reduce el espaciado en los enlaces de navegación */
     }
 
-    section#content {
+    section#contenido {
         padding: 1rem; /* Reduce el padding en el contenido */
     }
 
-    #copyMessage {
+    #mensajeCopiado {
         font-size: 0.8rem; /* Reduce el tamaño del mensaje */
         right: 1rem; /* Ajusta la posición horizontal */
         top: 1rem; /* Ajusta la posición vertical */

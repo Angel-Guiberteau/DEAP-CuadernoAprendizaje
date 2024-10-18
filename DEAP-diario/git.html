@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Documentación Git - Comandos y Gestión de Ramas</title>
         <link rel="stylesheet" href="css/git.css">
-        <script src="scripts/copiar.js"> </script>
+        <script src="scripts/copiar.js"></script>
     </head>
     <body>
         <header>
@@ -22,19 +22,19 @@
             </ul>
         </nav>
 
-        <section id="content">
+        <section id="contenido">
             <!-- Contenido PDF 1 -->
             <article id="pdf1">
                 <details>
                     <summary><h2>Comandos Básicos de Git</h2></summary>
                     <p>Este contenido aborda los comandos básicos para empezar a trabajar con Git.</p>
-                    <div class="commands-container">
-                        <p><b><span class="git-command" onclick="copyToClipboard('git help')">git help</span></b>: Muestra la ayuda del comando que se le indique.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git init')">git init</span></b>: Inicializa el repositorio local.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git status')">git status</span></b>: Muestra la lista de archivos que se han cambiado y los que están por ser preparados o confirmados.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git add [archivo/patrón]')">git add [archivo/patrón]</span></b>: Añade el archivo a staging.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git commit -m \'mensaje\'')">git commit -m 'mensaje'</span></b>: Guarda los archivos en el repositorio local con un mensaje descriptivo.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git log')">git log</span></b>: Muestra el historial de commits.</p>
+                    <div class="contenedor-comandos">
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git help')">git help</span></b>: Muestra la ayuda del comando que se le indique.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git init')">git init</span></b>: Inicializa el repositorio local.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git status')">git status</span></b>: Muestra la lista de archivos que se han cambiado y los que están por ser preparados o confirmados.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git add [archivo/patrón]')">git add [archivo/patrón]</span></b>: Añade el archivo a staging.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git commit -m \'mensaje\'')">git commit -m 'mensaje'</span></b>: Guarda los archivos en el repositorio local con un mensaje descriptivo.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra el historial de commits.</p>
                     </div>
                 </details>
             </article>
@@ -44,39 +44,39 @@
                 <details>
                     <summary><h2>Gestión de Ramas en Git</h2></summary>
                     <p>Este contenido cubre la creación, gestión y fusión de ramas en Git.</p>
-                    <div class="commands-container">
-                        <p><b><span class="git-command" onclick="copyToClipboard('git branch')">git branch</span></b>: Se usa para listar, crear o borrar ramas.</p>
+                    <div class="contenedor-comandos">
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Se usa para listar, crear o borrar ramas.</p>
                         <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git branch')">git branch</span></b>: Lista las ramas existentes.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git branch [nombre_nueva_rama]')">git branch [nombre_nueva_rama]</span></b>: Crea una nueva rama.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git branch -d [nombre_nueva_rama]')">git branch -d [nombre_nueva_rama]</span></b>: Elimina una rama existente.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git branch -m [old_nombre_rama] [new_nombre_rama]')">git branch -m [old_nombre_rama] [new_nombre_rama]</span></b>: Cambia el nombre de una rama.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Lista las ramas existentes.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch [nombre_nueva_rama]')">git branch [nombre_nueva_rama]</span></b>: Crea una nueva rama.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapaples('git branch -d [nombre_nueva_rama]')">git branch -d [nombre_nueva_rama]</span></b>: Elimina una rama existente.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch -m [old_nombre_rama] [new_nombre_rama]')">git branch -m [old_nombre_rama] [new_nombre_rama]</span></b>: Cambia el nombre de una rama.</li>
                         </ul>
 
-                        <p><b><span class="git-command" onclick="copyToClipboard('git show')">git show</span></b>: Permite ver el último commit al que está asociada una rama.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git show')">git show</span></b>: Permite ver el último commit al que está asociada una rama.</p>
 
-                        <p><b><span class="git-command" onclick="copyToClipboard('git log')">git log</span></b>: Muestra los IDs de los commits del repositorio local.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra los IDs de los commits del repositorio local.</p>
                         <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git log -p')">git log -p</span></b>: Incluye el historial de confirmaciones y cambios en los archivos.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git log --oneline')">git log --oneline</span></b>: Muestra el historial de commits en una sola línea por commit.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git log --oneline --all')">git log --oneline --all</span></b>: Muestra el historial de commits de todas las ramas.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git log -p')">git log -p</span></b>: Incluye el historial de confirmaciones y cambios en los archivos.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline')">git log --oneline</span></b>: Muestra el historial de commits en una sola línea por commit.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline --all')">git log --oneline --all</span></b>: Muestra el historial de commits de todas las ramas.</li>
                         </ul>
 
-                        <p><b><span class="git-command" onclick="copyToClipboard('git checkout')">git checkout</span></b>: Te permite moverte entre ramas.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout')">git checkout</span></b>: Te permite moverte entre ramas.</p>
                         <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git checkout -b [nombre_nueva_branch]')">git checkout -b [nombre_nueva_branch]</span></b>: Crea una nueva rama y cambia a ella automáticamente.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git checkout [ID_commit]')">git checkout [ID_commit]</span></b>: Permite volver a cualquier versión anterior en base al ID del commit.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapaples('git checkout -b [nombre_nueva_branch]')">git checkout -b [nombre_nueva_branch]</span></b>: Crea una nueva rama y cambia a ella automáticamente.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapaples('git checkout [ID_commit]')">git checkout [ID_commit]</span></b>: Permite volver a cualquier versión anterior en base al ID del commit.</li>
                         </ul>
 
-                        <p><b><span class="git-command" onclick="copyToClipboard('git diff')">git diff</span></b>: Se usa para ver una lista de todos los conflictos presentes.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff')">git diff</span></b>: Se usa para ver una lista de todos los conflictos presentes.</p>
                         <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git diff [branch_origen] [branch_destino]')">git diff [branch_origen] [branch_destino]</span></b>: Ver los conflictos entre ramas antes de fusionarlas.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff [branch_origen] [branch_destino]')">git diff [branch_origen] [branch_destino]</span></b>: Ver los conflictos entre ramas antes de fusionarlas.</li>
                         </ul>
 
-                        <p><b><span class="git-command" onclick="copyToClipboard('git merge')">git merge</span></b>: Se usa para fusionar una rama con otra rama activa.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge')">git merge</span></b>: Se usa para fusionar una rama con otra rama activa.</p>
                         <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git merge --abort')">git merge --abort</span></b>: Descarta la fusión en caso de conflictos.</li>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git log --merge')">git log --merge</span></b>: Muestra información sobre los commits que generaron un conflicto.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge --abort')">git merge --abort</span></b>: Descarta la fusión en caso de conflictos.</li>
+                            <li><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --merge')">git log --merge</span></b>: Muestra información sobre los commits que generaron un conflicto.</li>
                         </ul>
                     </div>
                 </details>
@@ -84,31 +84,26 @@
 
             <!-- Contenido PDF 3 -->
             <article id="pdf3">
-                <details open>
+                <details>
                     <summary><h2>Clonación y Fetch en Git</h2></summary>
                     <p>Este contenido cubre los comandos de clonación, fetch y pull en Git.</p>
-                    <div class="commands-container">
-                        <p><b><span class="git-command" onclick="copyToClipboard('git clone [remote_repo] [directory_local]')">git clone [remote_repo] [directory_local]</span></b>: Copia un repositorio remoto en el entorno local.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git clone --branch [tag] [remote_repo]')">git clone --branch [tag] [remote_repo]</span></b>: Copia solo la versión de la etiqueta indicada.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git clone --branch --single-branch [branch_name] [remote_repo]')">git clone --branch --single-branch [branch_name] [remote_repo]</span></b>: Clona solo la rama específica del repositorio remoto.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git pull')">git pull</span></b>: Sincroniza el repositorio local con el remoto, aplicando los cambios más recientes.</p>
-                        <ul>
-                            <li><b><span class="git-command" onclick="copyToClipboard('git pull --rebase')">git pull --rebase</span></b>: Actualiza el repositorio local, reubicando los cambios realizados en la rama local después de haber aplicado la fusión.</li>
-                        </ul>
-
-                        <p><b><span class="git-command" onclick="copyToClipboard('git fetch')">git fetch</span></b>: Descarga todos los cambios del repositorio remoto sin fusionarlos.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git fetch origin')">git fetch origin</span></b>: Descarga todos los cambios del repositorio remoto indicado.</p>
-                        <p><b><span class="git-command" onclick="copyToClipboard('git fetch --all')">git fetch --all</span></b>: Descarga todos los cambios de todos los repositorios remotos.</p>
+                    <div class="contenedor-comandos">
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone [remote_repo] [directory_local]')">git clone [remote_repo] [directory_local]</span></b>: Copia un repositorio remoto en el entorno local.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch [tag] [remote_repo]')">git clone --branch [tag] [remote_repo]</span></b>: Copia solo la versión de la etiqueta indicada.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch --single-branch [branch_name] [remote_repo]')">git clone --branch --single-branch [branch_name] [remote_repo]</span></b>: Copia solo la rama indicada.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git fetch')">git fetch</span></b>: Actualiza el repositorio local con información del remoto, pero no fusiona cambios automáticamente.</p>
+                        <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git pull')">git pull</span></b>: Realiza un fetch y luego fusiona los cambios automáticamente.</p>
                     </div>
                 </details>
             </article>
-
-            <!-- Mensaje de confirmación -->
-            <div id="copyMessage"></div>
         </section>
 
+        <div id="mensajeCopiado">
+            Copiado al portapapeles
+        </div>
+
         <footer>
-            <p>© 2024 - Proyecto de Documentación Git</p>
+            <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
         </footer>
     </body>
 </html>

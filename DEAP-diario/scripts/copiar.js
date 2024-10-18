@@ -1,10 +1,10 @@
-function copyToClipboard(command) {
-    navigator.clipboard.writeText(command).then(() => {
-        const message = document.getElementById('copyMessage');
-        message.innerText = 'Copiado al portapapeles';
-        message.style.display = 'block';
+function copiarAlPortapapeles(comando) {
+    navigator.clipboard.writeText(comando).then(() => {
+        const mensaje = document.getElementById('mensajeCopiado');
+        mensaje.innerText = 'Copiado al portapapeles';
+        mensaje.style.display = 'block';
         setTimeout(() => {
-            message.style.display = 'none';
+            mensaje.style.display = 'none';
         }, 2000);
     });
 }
