@@ -1,0 +1,211 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-top: 3rem; /* Cambiado a rem */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Cambiado a rem */
+    color: #00ffcc;
+}
+
+header p {
+    font-size: 1.2rem; /* Cambiado a rem */
+    color: #ffcc00;
+}
+
+/* Menú de navegación */
+nav {
+    margin: 2rem 0; /* Cambiado a rem */
+    width: 100%; /* Añadido para que ocupe todo el ancho */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos en la línea */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no hay suficiente espacio */
+    list-style: none;
+    gap: 1.5rem; /* Cambiado a rem */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 0.5rem 1rem; /* Cambiado a rem */
+    border-radius: 0.5rem; /* Cambiado a rem */
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #00ffcc;
+}
+
+/* Secciones de contenido */
+section#content {
+    width: 80%;
+    max-width: 60rem; /* Cambiado a rem */
+    padding: 2rem; /* Cambiado a rem */
+    background-color: #282828;
+    border-radius: 1rem; /* Cambiado a rem */
+    margin-bottom: 3rem; /* Cambiado a rem */
+}
+
+article {
+    margin-bottom: 4rem; /* Cambiado a rem */
+}
+
+article h2 {
+    font-size: 2rem; /* Cambiado a rem */
+    margin-bottom: 1rem; /* Cambiado a rem */
+    color: #ffcc00;
+}
+
+article p {
+    font-size: 1.1rem; /* Cambiado a rem */
+    line-height: 1.6;
+}
+
+/* Estilo para comandos */
+.commands-container {
+    margin-bottom: 3rem; /* Cambiado a rem */
+    list-style: none; /* Añadir esto para evitar puntos en la lista */
+}
+
+.git-command {
+    font-weight: bold;
+    color: #00ffcc;
+    background-color: #444444;
+    padding: 0.3rem 0.8rem; /* Cambiado a rem */
+    border-radius: 0.5rem; /* Cambiado a rem */
+    display: inline-block;
+    margin-bottom: 1rem; /* Cambiado a rem */
+    cursor: pointer; /* Añadir cursor pointer para indicar que se puede hacer clic */
+}
+
+/* Estilo para summary y details */
+details {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin: 0; /* Eliminar margen */
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.2rem; /* Cambiado a rem */
+    color: #ffcc00;
+    display: flex; /* Flex para alinear la flecha y el texto */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 0; /* Eliminar margen */
+    /* padding: 0.5rem 0; Espaciado interno ajustado */
+}
+
+summary::marker {
+    content: "▶"; /* Cambia la flecha a un icono personalizado */
+    margin-right: 0.5rem; /* Espaciado entre la flecha y el texto */
+}
+
+details[open] summary {
+    color: #00ffcc;
+}
+
+/* Footer */
+footer {
+    padding: 1rem; /* Cambiado a rem */
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: #888888;
+    font-size: 0.9rem; /* Cambiado a rem */
+}
+
+/* Mensaje de copiado */
+#copyMessage {
+    display: none;
+    color: #00ffcc; /* Color del mensaje */
+    margin-top: 1rem; /* Cambiado a rem */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 1rem; /* Cambiado a rem */
+    border-radius: 0.5rem; /* Cambiado a rem */
+    position: fixed; /* Fijo en pantalla */
+    top: 2rem; /* Cambiado a rem */
+    right: 2rem; /* Cambiado a rem */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    section#content {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduce el tamaño del encabezado */
+    }
+
+    header p {
+        font-size: 1rem; /* Reduce el tamaño del texto del encabezado */
+    }
+
+    article h2 {
+        font-size: 1.5rem; /* Reduce el tamaño de los encabezados de artículo */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce el tamaño de fuente en el pie de página */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del encabezado */
+    }
+
+    header p,
+    article p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto del encabezado y párrafos */
+    }
+
+    nav a {
+        padding: 0.3rem 0.7rem; /* Reduce el espaciado en los enlaces de navegación */
+    }
+
+    section#content {
+        padding: 1rem; /* Reduce el padding en el contenido */
+    }
+
+    #copyMessage {
+        font-size: 0.8rem; /* Reduce el tamaño del mensaje */
+        right: 1rem; /* Ajusta la posición horizontal */
+        top: 1rem; /* Ajusta la posición vertical */
+    }
+}
