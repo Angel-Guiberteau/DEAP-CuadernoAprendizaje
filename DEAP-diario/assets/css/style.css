@@ -1,0 +1,614 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Variables CSS */
+:root {
+    --gris-claro: #bababa;
+    --gris-mas-claro: #dadada;
+    --gradiente-circular-fondo: radial-gradient(circle at 50% -20%, #5a5a5a, #212121, #000000, #000000);
+    --negro: #000000;
+    --blanco: #fff;
+    --fuente: 'Poppins', sans-serif;
+}
+
+/* Configuración general */
+
+/* Estilo de la barra de scroll */
+::-webkit-scrollbar {
+    width: 1rem; /* Ancho de la barra de scroll */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gris-mas-claro); /* Color de fondo de la pista */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--negro); /* Color del pulgar */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid var(--gris-mas-claro); /* Borde alrededor del pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blanco); /* Color del pulgar al pasar el mouse */
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: var(--fuente);
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 2rem;
+    background-color: var(--gris-claro);
+    margin: 0; /* Evita márgenes adicionales */
+    color: var(--gris-claro);
+}
+
+
+/* HEADER */
+header {
+    background-color: var(--gris-mas-claro);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Alinea verticalmente */
+    padding: 1rem 2rem; /* Ajusta el espaciado interno */
+    color: var(--negro);
+    margin-bottom: 2rem;
+}
+
+header > div {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+}
+
+header > div:first-child {
+    gap: 0; /* Elimina el espacio entre el logo y el h1 */
+}
+
+header > div > a > img {
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: 5rem; /* Establece un tamaño consistente */
+    margin-right: 1rem; /* Espacio entre el logo y el h1 */
+    background-color: var(--negro);
+    border-radius: 1rem;
+}
+
+header > nav {
+    display: flex;
+    gap: 3rem; /* Espaciado horizontal entre los enlaces */
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header > div input {
+    width: 80%; /* Ajusta el ancho del campo de entrada */
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 2rem;
+    font-family: var(--fuente);
+    font-weight: bold;
+    background-color: var(--gris-claro);
+    text-align: center;
+    color: var(--blanco);
+}
+
+input::placeholder {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+header > div button {
+    width: 20%;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN */
+main {
+    background: var(--gradiente-circular-fondo);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* CARRUSEL PRINCIPAL */
+.carousel {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-height: 60%;
+}
+
+/* Carrusel track */
+.carousel-track {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo de los elementos del carrusel */
+.carousel-item {
+    text-align: center; /* Centra el texto bajo cada imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Estilo de las imágenes del carrusel */
+.carousel-item img {
+    width: 15rem; /* Tamaño reducido por defecto */
+    height: auto;
+    opacity: 0.5; /* Difuminado por defecto */
+    transform: scale(0.8); /* Reduce tamaño por defecto */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-bottom: 1%;
+    background-color: #dadada71;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Imagen activa */
+.carousel-item.active img {
+    opacity: 1; /* Imagen seleccionada es totalmente visible */
+    transform: scale(1.3); /* Amplía la imagen seleccionada, más grande que antes */
+}
+
+/* Títulos bajo las imágenes */
+.carousel-item p {
+    font-size: 2rem; /* Tamaño reducido por defecto */
+    font-weight: normal; /* Menos énfasis por defecto */
+    margin: 0;
+    opacity: 0.5; /* Difuminado por defecto */
+    transition: all 0.3s ease; /* Suaviza las transiciones */
+}
+
+/* Título activo */
+.carousel-item.active p {
+    font-size: 5rem; /* Tamaño más grande para el título activo */
+    opacity: 1; /* Título completamente visible */
+    color: #000; /* Color destacado */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
+
+/* Enlace dentro del título */
+.carousel-item p a {
+    text-decoration: none;
+    color: var(--blanco);
+    transition: all 0.2s ease;
+    font-size: 3rem;
+}
+
+/* Enlace activo */
+.carousel-item.active p a {
+    font-weight: bold; /* Más énfasis para el enlace activo */
+    font-size: 4.5rem;
+    transform: scale(1.2); /* Aumenta el tamaño del enlace activo */
+}
+
+/* Botones de control del carrusel */
+.carousel-controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espaciado entre los botones */
+    margin-top: 2rem;
+}
+
+/* Estilo de los botones de control */
+.carousel-controls button {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para los indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 2.5rem; /* Alinea los indicadores, reduce el gap para mayor proximidad */
+}
+
+/* Estilo de los indicadores */
+.carousel-indicators .indicator {
+    background-color: #aaa; /* Color de los círculos cuando no están activos */
+    width: 0.8rem; /* Aumenta ligeramente el tamaño */
+    height: 0.8rem; /* Aumenta ligeramente el tamaño */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Indicador activo */
+.carousel-indicators .indicator.active {
+    background-color: #fff; /* Color de los círculos cuando están activos */
+    transform: scale(1.5); /* Aumenta el tamaño de los círculos activos */
+}
+
+/* BARRA */
+
+hr {
+    width: 45%;  /* Ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    border: none; /* Elimina el borde predeterminado */
+    background: linear-gradient(to right, #0000003a, #555, #0000003a); /* Degradado de negro a gris hacia el centro */
+    margin-bottom: -2rem;
+    margin-top: 4rem;
+}
+
+
+/* SECCION TITULO Y TEXTO */
+
+.section {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.section h2 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+}
+
+.boton{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton:nth-child(1){
+    background-color: #D9D9D9;
+    color: var(--negro);
+    margin-right: 2rem;
+}
+
+.boton:nth-child(2){
+    background-color: #3C3C3C;
+    color: var(--blanco);
+}
+
+.boton:nth-child(1):hover {
+    background-color: var(--negro);
+    transform: scale(1.05);
+    color: var(--blanco);
+}
+
+.boton:nth-child(2):hover {
+    background-color: var(--gris-mas-claro);
+    transform: scale(1.05);
+    color: var(--negro);
+}
+
+/* SECTION GIT */
+
+.tituloSection{
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+}
+
+.parrafoTitulo{
+    margin: auto;
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.git {
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 80%;
+    color: var(--blanco);
+    font-family: var(--fuente);
+}
+
+.git article {
+    margin-bottom: 2rem;
+}
+
+.git details {
+    background-color: #dadadaac;
+    border-radius: 10px;
+    padding: 0.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.git details summary {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--negro);
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.git details summary:hover {
+    text-decoration: underline;
+}
+
+.git details p {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.git details .contenedor-comandos {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.git details .contenedor-comandos p {
+    margin: 1rem 0;
+    color: var(--negro);
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.git details .contenedor-comandos ul {
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.git details ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+
+.git details .contenedor-comandos ul li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--negro);
+    margin-bottom: 0.5rem;
+}
+
+.git details .comando-git {
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--negro);
+    background-color: var(--gris-claro);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.git details .comando-git:hover {
+    background-color: var(--gris-mas-claro);
+    transform: scale(1.1);
+    color: var(--blanco);
+}
+
+.git hr {
+    margin: 2rem auto;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), #555, rgba(0, 0, 0, 0.2));
+    border: none;
+}
+
+/* Mensaje de copiado */
+#mensajeCopiado {
+    display: none;
+    color: var(--blanco); /* Color blanco para que contraste con el fondo oscuro */
+    margin-top: 2rem; /* Mayor separación desde el top */
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    padding: 1rem 2rem; /* Espaciado adecuado */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    position: fixed; /* Fijo en pantalla */
+    top: 2rem; /* Posición fija en la parte superior */
+    right: 5rem; /* Alineado a la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    font-family: var(--fuente); /* Usa la misma fuente que en el resto de la página */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Efecto de sombra suave para destacar el texto */
+}
+
+/* APACHE */
+
+.apartado{
+    width: 78%;
+    margin: auto;
+    text-align: center;
+    background-color: #dadada1e;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.apartado h3{
+    font-size: 2rem;
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+.apartado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.apartado div {
+    width: 48%;
+    text-align: left;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20%;
+}
+
+.container h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container ul li{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.508);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* DNS */
+
+.dns h2, .apache h2 {
+    margin-top: 3rem;
+}
+
+.dns h3, .apache h3{
+    margin-bottom: 2rem;
+}
+
+.width{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--gris-mas-claro);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    color: var(--negro);
+    margin: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer p{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: var(--negro);
+    text-align: center;
+    margin: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--blanco);
+    background-color: #000;
+}
+
+nav a.active {
+    color: var(--blanco);
+    text-decoration: underline;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 10%;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: var(--gris-mas-claro);
+    color: var(--negro);
+}
+

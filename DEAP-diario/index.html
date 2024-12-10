@@ -1,74 +1,422 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Curso de Despliegue de Aplicaciones Web">
-      <title>Despliegue de Aplicaciones Web</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script src="scripts/script.js" defer></script>
-  </head>
-  <body>
-      <!-- Navegación Superior -->
-      <nav class="navegacion">
-          <div class="logo">
-              <a href="index.html">
-                  <img src="resources/logo-removebg-preview.png" alt="Logo Despliegue" class="logo-img">
-              </a>
-          </div>
-          <ul class="nav-links">
-              <li><a href="git.html">Git</a></li>
-              <li><a href="">HTTP</a></li>
-              <!-- <li><a href="acerca.html">Proximamente</a></li> -->
-          </ul>
-          <button class="modo-oscuro-toggle" id="modoOscuroToggle">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                  <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
-              </svg>
-          </button>
-      </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="assets/resources/img/logo.ico">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>DiarioDeApredizaje</title>
+    </head>
+    <body id="inicio">
+        <header>
+            <div>
+                <a href="index.html">
+                    <img src="assets/resources/img/logo.png" alt="logo">
+                </a>
+                <h1>
+                    DiarioDeApredizaje
+                </h1>
+            </div>
+            <nav>
+                <a href="#git">GIT</a>
+                <a href="#http">HTTP</a>
+                <a href="#dns">DNS</a>
+                <a href="#apache">APACHE</a>
+            </nav>
+            <div>
+                <input type="text" placeholder="search">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <a href="#git">
+                            <img src="assets/resources/img/gitLogo.png" alt="Git">
+                        </a>
+                        <p><a href="#git">Git</a></p>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <a href="#http">
+                            <img src="assets/resources/img/httplogo.png" alt="HTTP">
+                        </a>
+                        <p><a href="#http">HTTP</a></p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#dns">
+                            <img src="assets/resources/img/dnsLogo.png" alt="DNS">
+                        </a>
+                        <p><a href="#dns">DNS</a></p>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#apache">
+                            <img src="assets/resources/img/apacheLogo.png" alt="APACHE">
+                        </a>
+                        <p><a href="#apache">APACHE</a></p>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                    </button>
+                    <div class="carousel-indicators">
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                    <button class="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                    </button>
+                </div>
+            </section>
+            <hr>
+            <section class="section">
+                <h2>Despliegue de Aplicaciones Web</h2>
+                <p class="width">
+                    El despliegue de aplicaciones web es el proceso de publicar una aplicación web en un servidor para que pueda ser accesible a través de Internet. 
+                    Este proceso implica la configuración del servidor, la instalación de la aplicación y la puesta en marcha de la misma.    
+                <p>
+                <a href="https://fundacionloyola.com/vguadalupe/" class="boton" target="_blank">EVG</a>
+                <a href="https://angel-guiberteau.github.io/Portfolio-AngelGF/" class="boton" target="_blank">Conóceme</a>
+            </section>
+            <hr>
+            <!-- CONTENIDO DE GIT -->
+            <section class="git" id="git">
+                <h2 class="tituloSection">Control de versiones con GIT</h2>
+                <p class="parrafoTitulo">
+                    Git es un sistema de control de versiones distribuido que permite a los desarrolladores colaborar en proyectos de software. 
+                    Permite a los desarrolladores llevar un registro de los cambios en el código fuente, colaborar con otros desarrolladores y revertir a versiones anteriores del código.
+                </p>
+                <!-- Contenido PDF 1 -->
+                <article id="pdf1">
+                    <details>
+                        <summary><h2>Comandos Básicos de Git</h2></summary>
+                        <p class="centrar">Este contenido aborda los comandos básicos para empezar a trabajar con Git.</p>
+                        <div class="contenedor-comandos">
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git help')">git help</span></b>: Muestra la ayuda del comando que se le indique.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git init')">git init</span></b>: Inicializa el repositorio local.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git status')">git status</span></b>: Muestra la lista de archivos que se han cambiado y los que están por ser preparados o confirmados.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git add [archivo/patrón]')">git add [archivo/patrón]</span></b>: Añade el archivo a staging.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git commit -m \'mensaje\'')">git commit -m 'mensaje'</span></b>: Guarda los archivos en el repositorio local con un mensaje descriptivo.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra el historial de commits.</p>
+                        </div>
+                    </details>
+                </article>
 
-      <!-- Contenedor principal -->
-      <main>
-          <!-- Hero actualizado (sin botón) -->
-          <section class="hero">
-              <div class="hero-contenido">
-                  <h1>Despliegue de Aplicaciones Web</h1>
-                  <p>Optimiza y publica tus proyectos en línea</p>
-              </div>
-          </section>
+                <!-- Contenido PDF 2 -->
+                <article id="pdf2">
+                    <details>
+                        <summary><h2>Gestión de Ramas en Git</h2></summary>
+                        <p class="centrar">Este contenido cubre la creación, gestión y fusión de ramas en Git.</p>
+                        <div class="contenedor-comandos">
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Se usa para listar, crear o borrar ramas.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Lista las ramas existentes.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch [nombre_nueva_rama]')">git branch [nombre_nueva_rama]</span></b>: Crea una nueva rama.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch -d [nombre_nueva_rama]')">git branch -d [nombre_nueva_rama]</span></b>: Elimina una rama existente.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch -m [old_nombre_rama] [new_nombre_rama]')">git branch -m [old_nombre_rama] [new_nombre_rama]</span></b>: Cambia el nombre de una rama.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git show')">git show</span></b>: Permite ver el último commit al que está asociada una rama.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra los IDs de los commits del repositorio local.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log -p')">git log -p</span></b>: Incluye el historial de confirmaciones y cambios en los archivos.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline')">git log --oneline</span></b>: Muestra el historial de commits en una sola línea por commit.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline --all')">git log --oneline --all</span></b>: Muestra el historial de commits de todas las ramas.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout')">git checkout</span></b>: Te permite moverte entre ramas.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout -b [nombre_nueva_branch]')">git checkout -b [nombre_nueva_branch]</span></b>: Crea una nueva rama y cambia a ella automáticamente.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout [ID_commit]')">git checkout [ID_commit]</span></b>: Permite volver a cualquier versión anterior en base al ID del commit.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff')">git diff</span></b>: Se usa para ver una lista de todos los conflictos presentes.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff [branch_origen] [branch_destino]')">git diff [branch_origen] [branch_destino]</span></b>: Ver los conflictos entre ramas antes de fusionarlas.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge')">git merge</span></b>: Se usa para fusionar una rama con otra rama activa.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge --abort')">git merge --abort</span></b>: Descarta la fusión en caso de conflictos.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --merge')">git log --merge</span></b>: Muestra información sobre los commits que generaron un conflicto.</p>
+                        </div>
+                    </details>
+                </article>
 
-          <!-- Sección de tarjetas -->
-          <section id="temas" class="contenedor-cartas">
-              <div class="grid-cartas">
-                  <div class="carta">
-                      <a href="git.html" class="enlace-carta">
-                          <img src="resources/git.png" alt="Configuración Git">
-                          <h3>Configuración de Git</h3>
-                          <p>Consigue el mejor control de versiones</p>
-                      </a>
-                  </div>
-                  <div class="carta">
-                      <a href="" class="enlace-carta">
-                          <img src="resources/candado.png" alt="Comandos Básicos">
-                          <h3>Protocolo HTTP</h3>
-                          <p>Aprende cómo funciona el protocolo HTTP y su importancia en la web.</p>
-                      </a>
-                  </div>
-                  <div class="carta">
-                      <a href="" class="enlace-carta">
-                          <img src="resources/candado.png" alt="Branching">
-                          <h3>Proximamente</h3>
-                          <!-- <p>Proximamente</p> -->
-                      </a>
-                  </div>
-              </div>
-          </section>
-      </main>
+                <!-- Contenido PDF 3 -->
+                <article id="pdf3">
+                    <details>
+                        <summary><h2>Clonación y Fetch en Git</h2></summary>
+                        <p class="centrar">Este contenido cubre los comandos de clonación, fetch y pull en Git.</p>
+                        <div class="contenedor-comandos">
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone [remote_repo] [directory_local]')">git clone [remote_repo] [directory_local]</span></b>: Copia un repositorio remoto en el entorno local.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch [tag] [remote_repo]')">git clone --branch [tag] [remote_repo]</span></b>: Copia solo la versión de la etiqueta indicada.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch --single-branch [branch_name] [remote_repo]')">git clone --branch --single-branch [branch_name] [remote_repo]</span></b>: Copia solo la rama indicada.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git fetch')">git fetch</span></b>: Actualiza el repositorio local con información del remoto, pero no fusiona cambios automáticamente.</p>
+                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git pull')">git pull</span></b>: Realiza un fetch y luego fusiona los cambios automáticamente.</p>
+                        </div>
+                    </details>
+                </article>
+                <div id="mensajeCopiado">
+                    Copiado al portapapeles
+                </div>
+                <hr>
+            </section>
+            <!-- CONTENIDO APACHE -->
+            <section class="section http">
+                <h2 class="tituloSection" id="http">Introduccion HTTP</h2>
+                <p>HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación entre un cliente y un servidor. Su principal propósito es la transferencia de información.</p>
+                <div class="apartado">
+                    <h3>Funcionamiento del protocolo HTTP</h3>
+                    <img src="assets/resources/img/esquemaHTTP.png" alt="esquema http">
+                    <div class="container">
+                        <div>
+                            <h4>Cliente WEB</h4>
+                            <ul>
+                                <li>Solicita información y la interpreta</li>
+                                <li>Renderiza en pantalla el resultado</li>
+                                <li>Interactúa con el usuario</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Servidor WEB</h4>
+                            <ul>
+                                <li>Sirve contenido estático</li>
+                                <li>Ejecuta programas para generar contenido dinámico</li>
+                                <li>Certificados SSL/TLS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>HTTP / HTTPS</h3>
+                    <div class="container">
+                        <div>
+                            <h4>HTTP</h4>
+                            <ul>
+                                <li>Es el protocolo de transferencia sin cifrado, esto es un problema de seguridad ya que en esta conexion los datos están expuestos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>HTTPS</h4>
+                            <ul>
+                                <li>Es el protocolo de transferencia con cifrado, esto es una solución al problema de seguridad de HTTP. Se necesita un certificado SSL/TLS para poder usar HTTPS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Tipos de solicitudes</h3>
+                    <div class="container">
+                        <div>
+                            <h4>GET</h4>
+                            <ul>
+                                <li>Se usa para solicitar información al servidor sin modificar los datos en el servidor.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>POST</h4>
+                            <ul>
+                                <li>Se usa para enviar información al servidor y modificar los datos en el servidor.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Codigos de estado</h3>
+                    <div class="container">
+                        <div>
+                            <h4>1XX</h4>
+                            <ul>
+                                <li>Respuestas informativas</li>
+                                <ul>
+                                    <li>100: Continuar</li>
+                                    <li>101: Cambio de protocolo</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>2XX</h4>
+                            <ul>
+                                <li>Respuestas satisfactorias</li>
+                                <ul>
+                                    <li>200: OK</li>
+                                    <li>201: Creado</li>
+                                    <li>202: Aceptado</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>3XX</h4>
+                            <ul>
+                                <li>Redirecciones</li>
+                                <ul>
+                                    <li>300: Múltiples opciones</li>
+                                    <li>301: Movido permanentemente</li>
+                                    <li>302: Encontrado</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div>
+                            <h4>4XX</h4>
+                            <ul>
+                                <li>Errores del cliente</li>
+                                <ul>
+                                    <li>400: Solicitud incorrecta</li>
+                                    <li>401: No autorizado</li>
+                                    <li>403: Prohibido</li>
+                                    <li>404: No encontrado</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>5XX</h4>
+                            <ul>
+                                <li>Errores del servidor</li>
+                                <ul>
+                                    <li>500: Error interno del servidor</li>
+                                    <li>502: Error de puerta de enlace</li>
+                                    <li>503: Servicio no disponible</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <!-- CONTENIDO DNS -->
+            <section class="section dns" id="dns">
+                <h2 class="tituloSection">Sistema de Nombres de Dominio (DNS)</h2>
+                <p class="parrafoTitulo">El Sistema de Nombres de Dominio (DNS) es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Asocia información variada con nombres de dominio asignados a cada uno de los participantes.</p>
+                <div class="apartado">
+                    <h3>Funcionamiento del DNS</h3>
+                    <img src="assets/resources/img/esquemaDNS.png" alt="esquema dns">
+                    <div class="container">
+                        <div>
+                            <h4>Cliente</h4>
+                            <ul>
+                                <li>Realiza una petición de resolución de nombres de dominio.</li>
+                                <li>Envía la petición al servidor DNS.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Servidor DNS</h4>
+                            <ul>
+                                <li>Recibe la petición de resolución de nombres de dominio.</li>
+                                <li>Devuelve la dirección IP asociada al nombre de dominio solicitado.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Tipos de registros DNS</h3>
+                    <div class="container">
+                        <div>
+                            <h4>A</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con una dirección IP.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>AAAA</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con una dirección IPv6.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>CNAME</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con otro nombre de dominio.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>MX</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con un servidor de correo.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>NS</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con un servidor de nombres.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>TXT</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con texto arbitrario.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Funciones del DNS</h3>
+                    <div class="container">
+                        <div>
+                            <h4>Resolución de nombres</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con una dirección IP.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Redirección de correos</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con un servidor de correo.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Redirección de tráfico</h4>
+                            <ul>
+                                <li>Asocia un nombre de dominio con un servidor web.</li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+            <hr>
+            <!-- APACHE -->
+            <section class="section apache" id="apache">
+                <h2 class="tituloSection">Servidor Web Apache</h2>
+                <p class="parrafoTitulo">Apache es un servidor web de código abierto que se utiliza para servir sitios web. Es el servidor web más popular del mundo y es conocido por su flexibilidad y capacidad de personalización.</p>
+                <div class="apartado">
+                    <h3>Funcionamiento de Apache</h3>
+                    <img src="assets/resources/img/esquemaApache.png" alt="esquema apache">
+                    <div class="container">
+                        <div>
+                            <h4>Cliente</h4>
+                            <ul>
+                                <li>Realiza una petición de un recurso web.</li>
+                                <li>Envía la petición al servidor Apache.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Servidor Apache</h4>
+                            <ul>
+                                <li>Recibe la petición del cliente.</li>
+                                <li>Devuelve el recurso solicitado al cliente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Contextos del servidor</h3>
+                    <div class="container">
+                        <div>
+                            <h4>Contexto Servidor</h4>
+                            <ul>
+                                <li>En este contexto se definen las directivas que afectan a todo el servidor.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contexto VirtualHost</h4>
+                            <ul>
+                                <li>En este contexto se definen las directivas que afectan a un host virtual (aplicacion web).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contexto Directorio</h4>
+                            <ul>
+                                <li>En este contexto se definen las directivas que afectan a un directorio en concreto.</li>
+                            </ul>
+                        </div>
+                    </div> 
 
-      <!-- Footer -->
-      <footer class="footer">
-          <p>&copy; 2024 Despliegue de Aplicaciones Web</p>
-      </footer>
-  </body>
+                </div>
+            </section>
+            <hr>
+            <footer>
+                <p>Desarrollado por Angel Guiberteau Franco</p>
+                <a href="#inicio">Volver arriba</a>
+            </footer>
+            <button id="backToTop" title="Volver arriba">↑</button>
+
+
+            <script src="assets/js/carrousel.js"></script>
+            <script src="assets/js/copiar.js"></script>
+            <script src="assets/js/back.js"></script>
+            <script src="assets/js/buscar.js"></script>
+        </main>
+    </body>
 </html>
