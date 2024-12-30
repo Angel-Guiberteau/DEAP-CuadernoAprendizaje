@@ -3,420 +3,198 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="assets/resources/img/logo.ico">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <title>DiarioDeAprendizaje</title>
+        <!-- FavIcon -->
+        <link rel="icon" type="image/png" href="assets/img/icon.ico">
+        <!-- Styles -->
+        <link rel="stylesheet" href="assets/styles/normalize.css"> 
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <title>ÁngelGF - Portfolio</title>
     </head>
-    <body id="inicio">
+    <body>
         <header>
-            <div>
-                <a href="index.html">
-                    <img src="assets/resources/img/logo.png" alt="logo">
-                </a>
-                <h1>
-                    DiarioDeAprendizaje
-                </h1>
-            </div>
-            <nav>
-                <a href="#git">GIT</a>
-                <a href="#http">HTTP</a>
-                <a href="#dns">DNS</a>
-                <a href="#apache">APACHE</a>
-            </nav>
-            <div>
-                <input type="text" placeholder="search">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                </button>
+            <div id="navbar">
+                <h1>Ángel<span>GF</span></h1>
+                <nav>
+                    <a href="#navbar">Home</a>
+                    <a href="#About">About</a>
+                    <a href="#proyects-intro">Proyects</a>
+                    <button id="dark-mode-toggle" class="modo-oscuro-toggle">
+                        🌙
+                    </button>
+                </nav>
             </div>
         </header>
         <main>
-            <section class="carousel">
-                <div class="carousel-track">
-                    <div class="carousel-item">
-                        <a href="#git">
-                            <img src="assets/resources/img/gitLogo.png" alt="Git">
-                        </a>
-                        <p><a href="#git">Git</a></p>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <a href="#http">
-                            <img src="assets/resources/img/httplogo.png" alt="HTTP">
-                        </a>
-                        <p><a href="#http">HTTP</a></p>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="#dns">
-                            <img src="assets/resources/img/dnsLogo.png" alt="DNS">
-                        </a>
-                        <p><a href="#dns">DNS</a></p>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="#apache">
-                            <img src="assets/resources/img/apacheLogo.png" alt="APACHE">
-                        </a>
-                        <p><a href="#apache">APACHE</a></p>
-                    </div>
+            <section id="intro">
+                <div class="intro-img-container">
+                    <img src="assets/img/me.jpg" alt="foto de perfil">
+                    <ul class="example-2">
+                        <li class="icon-content">
+                            <a href="https://www.linkedin.com/in/%C3%A1ngel-guiberteau-franco-84a827311/" aria-label="LinkedIn" data-social="linkedin" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">LinkedIn</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://github.com/Angel-Guiberteau" aria-label="GitHub" data-social="github" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">GitHub</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://www.instagram.com/angel_99sk/" aria-label="Instagram" data-social="instagram" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">Instagram</div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="carousel-controls">
-                    <button class="prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-                    </button>
-                    <div class="carousel-indicators">
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                    </div>
-                    <button class="next">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
-                    </button>
-                </div>
-            </section>
-            <hr>
-            <section class="section">
-                <h2>Despliegue de Aplicaciones Web</h2>
-                <p class="width">
-                    El despliegue de aplicaciones web es el proceso de publicar una aplicación web en un servidor para que pueda ser accesible a través de Internet. 
-                    Este proceso implica la configuración del servidor, la instalación de la aplicación y la puesta en marcha de la misma.    
-                <p>
-                <a href="https://fundacionloyola.com/vguadalupe/" class="boton" target="_blank">EVG</a>
-                <a href="https://angel-guiberteau.github.io/Portfolio-AngelGF/" class="boton" target="_blank">Conóceme</a>
-            </section>
-            <hr>
-            <!-- CONTENIDO DE GIT -->
-            <section class="git" id="git">
-                <h2 class="tituloSection">Control de versiones con GIT</h2>
-                <p class="parrafoTitulo">
-                    Git es un sistema de control de versiones distribuido que permite a los desarrolladores colaborar en proyectos de software. 
-                    Permite a los desarrolladores llevar un registro de los cambios en el código fuente, colaborar con otros desarrolladores y revertir a versiones anteriores del código.
-                </p>
-                <!-- Contenido PDF 1 -->
-                <article id="pdf1">
-                    <details>
-                        <summary><h2>Comandos Básicos de Git</h2></summary>
-                        <p class="centrar">Este contenido aborda los comandos básicos para empezar a trabajar con Git.</p>
-                        <div class="contenedor-comandos">
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git help')">git help</span></b>: Muestra la ayuda del comando que se le indique.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git init')">git init</span></b>: Inicializa el repositorio local.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git status')">git status</span></b>: Muestra la lista de archivos que se han cambiado y los que están por ser preparados o confirmados.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git add [archivo/patrón]')">git add [archivo/patrón]</span></b>: Añade el archivo a staging.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git commit -m \'mensaje\'')">git commit -m 'mensaje'</span></b>: Guarda los archivos en el repositorio local con un mensaje descriptivo.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra el historial de commits.</p>
-                        </div>
-                    </details>
-                </article>
-
-                <!-- Contenido PDF 2 -->
-                <article id="pdf2">
-                    <details>
-                        <summary><h2>Gestión de Ramas en Git</h2></summary>
-                        <p class="centrar">Este contenido cubre la creación, gestión y fusión de ramas en Git.</p>
-                        <div class="contenedor-comandos">
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Se usa para listar, crear o borrar ramas.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch')">git branch</span></b>: Lista las ramas existentes.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch [nombre_nueva_rama]')">git branch [nombre_nueva_rama]</span></b>: Crea una nueva rama.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch -d [nombre_nueva_rama]')">git branch -d [nombre_nueva_rama]</span></b>: Elimina una rama existente.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git branch -m [old_nombre_rama] [new_nombre_rama]')">git branch -m [old_nombre_rama] [new_nombre_rama]</span></b>: Cambia el nombre de una rama.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git show')">git show</span></b>: Permite ver el último commit al que está asociada una rama.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log')">git log</span></b>: Muestra los IDs de los commits del repositorio local.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log -p')">git log -p</span></b>: Incluye el historial de confirmaciones y cambios en los archivos.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline')">git log --oneline</span></b>: Muestra el historial de commits en una sola línea por commit.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --oneline --all')">git log --oneline --all</span></b>: Muestra el historial de commits de todas las ramas.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout')">git checkout</span></b>: Te permite moverte entre ramas.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout -b [nombre_nueva_branch]')">git checkout -b [nombre_nueva_branch]</span></b>: Crea una nueva rama y cambia a ella automáticamente.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git checkout [ID_commit]')">git checkout [ID_commit]</span></b>: Permite volver a cualquier versión anterior en base al ID del commit.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff')">git diff</span></b>: Se usa para ver una lista de todos los conflictos presentes.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git diff [branch_origen] [branch_destino]')">git diff [branch_origen] [branch_destino]</span></b>: Ver los conflictos entre ramas antes de fusionarlas.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge')">git merge</span></b>: Se usa para fusionar una rama con otra rama activa.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git merge --abort')">git merge --abort</span></b>: Descarta la fusión en caso de conflictos.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git log --merge')">git log --merge</span></b>: Muestra información sobre los commits que generaron un conflicto.</p>
-                        </div>
-                    </details>
-                </article>
-
-                <!-- Contenido PDF 3 -->
-                <article id="pdf3">
-                    <details>
-                        <summary><h2>Clonación y Fetch en Git</h2></summary>
-                        <p class="centrar">Este contenido cubre los comandos de clonación, fetch y pull en Git.</p>
-                        <div class="contenedor-comandos">
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone [remote_repo] [directory_local]')">git clone [remote_repo] [directory_local]</span></b>: Copia un repositorio remoto en el entorno local.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch [tag] [remote_repo]')">git clone --branch [tag] [remote_repo]</span></b>: Copia solo la versión de la etiqueta indicada.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git clone --branch --single-branch [branch_name] [remote_repo]')">git clone --branch --single-branch [branch_name] [remote_repo]</span></b>: Copia solo la rama indicada.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git fetch')">git fetch</span></b>: Actualiza el repositorio local con información del remoto, pero no fusiona cambios automáticamente.</p>
-                            <p><b><span class="comando-git" onclick="copiarAlPortapapeles('git pull')">git pull</span></b>: Realiza un fetch y luego fusiona los cambios automáticamente.</p>
-                        </div>
-                    </details>
-                </article>
-                <div id="mensajeCopiado">
-                    Copiado al portapapeles
-                </div>
-                <hr>
-            </section>
-            <!-- CONTENIDO APACHE -->
-            <section class="section http">
-                <h2 class="tituloSection" id="http">Introduccion HTTP</h2>
-                <p>HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación entre un cliente y un servidor. Su principal propósito es la transferencia de información.</p>
-                <div class="apartado">
-                    <h3>Funcionamiento del protocolo HTTP</h3>
-                    <img src="assets/resources/img/esquemaHTTP.png" alt="esquema http">
-                    <div class="container">
-                        <div>
-                            <h4>Cliente WEB</h4>
-                            <ul>
-                                <li>Solicita información y la interpreta</li>
-                                <li>Renderiza en pantalla el resultado</li>
-                                <li>Interactúa con el usuario</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Servidor WEB</h4>
-                            <ul>
-                                <li>Sirve contenido estático</li>
-                                <li>Ejecuta programas para generar contenido dinámico</li>
-                                <li>Certificados SSL/TLS</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>HTTP / HTTPS</h3>
-                    <div class="container">
-                        <div>
-                            <h4>HTTP</h4>
-                            <ul>
-                                <li>Es el protocolo de transferencia sin cifrado, esto es un problema de seguridad ya que en esta conexion los datos están expuestos.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>HTTPS</h4>
-                            <ul>
-                                <li>Es el protocolo de transferencia con cifrado, esto es una solución al problema de seguridad de HTTP. Se necesita un certificado SSL/TLS para poder usar HTTPS.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Tipos de solicitudes</h3>
-                    <div class="container">
-                        <div>
-                            <h4>GET</h4>
-                            <ul>
-                                <li>Se usa para solicitar información al servidor sin modificar los datos en el servidor.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>POST</h4>
-                            <ul>
-                                <li>Se usa para enviar información al servidor y modificar los datos en el servidor.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Codigos de estado</h3>
-                    <div class="container">
-                        <div>
-                            <h4>1XX</h4>
-                            <ul>
-                                <li>Respuestas informativas</li>
-                                <ul>
-                                    <li>100: Continuar</li>
-                                    <li>101: Cambio de protocolo</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>2XX</h4>
-                            <ul>
-                                <li>Respuestas satisfactorias</li>
-                                <ul>
-                                    <li>200: OK</li>
-                                    <li>201: Creado</li>
-                                    <li>202: Aceptado</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>3XX</h4>
-                            <ul>
-                                <li>Redirecciones</li>
-                                <ul>
-                                    <li>300: Múltiples opciones</li>
-                                    <li>301: Movido permanentemente</li>
-                                    <li>302: Encontrado</li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div>
-                            <h4>4XX</h4>
-                            <ul>
-                                <li>Errores del cliente</li>
-                                <ul>
-                                    <li>400: Solicitud incorrecta</li>
-                                    <li>401: No autorizado</li>
-                                    <li>403: Prohibido</li>
-                                    <li>404: No encontrado</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>5XX</h4>
-                            <ul>
-                                <li>Errores del servidor</li>
-                                <ul>
-                                    <li>500: Error interno del servidor</li>
-                                    <li>502: Error de puerta de enlace</li>
-                                    <li>503: Servicio no disponible</li>
-                                </ul>
-                            </ul>
-                        </div>
+                <div class="intro-text-container">
+                    <h2>Hi, I'm <span class="blue-text">Ángel Guiberteau</span></h2>
+                    <p>
+                        A skilled web developer, crafting and managing websites and web applications to ensure the success of the entire product with finesse.
+                    </p>
+                    <div class="intro-button-container">
+                        <a href="#proyects-intro" id="button-proyects">Proyects</a>
+                        <a href="assets/descargas/CV.pdf" id="button-proyects">CV</a>
                     </div>
                 </div>
             </section>
-            <hr>
-            <!-- CONTENIDO DNS -->
-            <section class="section dns" id="dns">
-                <h2 class="tituloSection">Sistema de Nombres de Dominio (DNS)</h2>
-                <p class="parrafoTitulo">El Sistema de Nombres de Dominio (DNS) es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Asocia información variada con nombres de dominio asignados a cada uno de los participantes.</p>
-                <div class="apartado">
-                    <h3>Funcionamiento del DNS</h3>
-                    <img src="assets/resources/img/esquemaDNS.png" alt="esquema dns">
-                    <div class="container">
-                        <div>
-                            <h4>Cliente</h4>
-                            <ul>
-                                <li>Realiza una petición de resolución de nombres de dominio.</li>
-                                <li>Envía la petición al servidor DNS.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Servidor DNS</h4>
-                            <ul>
-                                <li>Recibe la petición de resolución de nombres de dominio.</li>
-                                <li>Devuelve la dirección IP asociada al nombre de dominio solicitado.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Tipos de registros DNS</h3>
-                    <div class="container">
-                        <div>
-                            <h4>A</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con una dirección IP.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>AAAA</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con una dirección IPv6.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>CNAME</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con otro nombre de dominio.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>MX</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con un servidor de correo.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>NS</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con un servidor de nombres.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>TXT</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con texto arbitrario.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Funciones del DNS</h3>
-                    <div class="container">
-                        <div>
-                            <h4>Resolución de nombres</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con una dirección IP.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Redirección de correos</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con un servidor de correo.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Redirección de tráfico</h4>
-                            <ul>
-                                <li>Asocia un nombre de dominio con un servidor web.</li>
-                            </ul>
-                        </div>
-                    </div>
-            </section>
-            <hr>
-            <!-- APACHE -->
-            <section class="section apache" id="apache">
-                <h2 class="tituloSection">Servidor Web Apache</h2>
-                <p class="parrafoTitulo">Apache es un servidor web de código abierto que se utiliza para servir sitios web. Es el servidor web más popular del mundo y es conocido por su flexibilidad y capacidad de personalización.</p>
-                <div class="apartado">
-                    <h3>Funcionamiento de Apache</h3>
-                    <img src="assets/resources/img/esquemaApache.png" alt="esquema apache">
-                    <div class="container">
-                        <div>
-                            <h4>Cliente</h4>
-                            <ul>
-                                <li>Realiza una petición de un recurso web.</li>
-                                <li>Envía la petición al servidor Apache.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Servidor Apache</h4>
-                            <ul>
-                                <li>Recibe la petición del cliente.</li>
-                                <li>Devuelve el recurso solicitado al cliente.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Contextos del servidor</h3>
-                    <div class="container">
-                        <div>
-                            <h4>Contexto Servidor</h4>
-                            <ul>
-                                <li>En este contexto se definen las directivas que afectan a todo el servidor.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Contexto VirtualHost</h4>
-                            <ul>
-                                <li>En este contexto se definen las directivas que afectan a un host virtual (aplicacion web).</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Contexto Directorio</h4>
-                            <ul>
-                                <li>En este contexto se definen las directivas que afectan a un directorio en concreto.</li>
-                            </ul>
-                        </div>
-                    </div> 
-
+            <section id="About">
+                <div class="about-intro">
+                    <h2>About me</h2>
+                    <hr>
+                    <p>
+                        Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.
+                    </p>
                 </div>
-            </section>
-            <hr>
-            <footer>
-                <p>Desarrollado por Angel Guiberteau Franco</p>
-                <a href="#inicio">Volver arriba</a>
-            </footer>
-            <button id="backToTop" title="Volver arriba">↑</button>
-
-
-            <script src="assets/js/carrousel.js"></script>
-            <script src="assets/js/copiar.js"></script>
-            <script src="assets/js/back.js"></script>
-            <script src="assets/js/buscar.js"></script>
+                <div class="about-content-container">
+                    <div class="know-about-container">
+                        <h3>Know About Me</h3>
+                        <p>
+                            I am a web developer with a passion for creating and managing websites and web applications. I have experience in programming languages such as JavaScript, Java, C, Bash, HTML, CSS, PHP, and SQL. I am also a student of the Higher Degree in Web Application Development.
+                        </p>
+                    </div>
+                    <div class="skills-container">
+                        <h3>My Skills</h3>
+                        <div class="skills">
+                            <button class="skill-btn">Bash</button>
+                            <button class="skill-btn">C</button>
+                            <button class="skill-btn">CSS</button>
+                            <button class="skill-btn">HTML</button>
+                            <button class="skill-btn">Java</button>
+                            <button class="skill-btn">JavaScript</button>
+                            <button class="skill-btn">PHP</button>
+                            <button class="skill-btn">SQL</button>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+            <section>
+                <div id="proyects-intro">
+                    <h2>Proyects</h2>
+                    <hr>
+                </div>
+                <div class="proyect-container">
+                    <div class="proyect">
+                        <img src="assets/img/espejo.jpg" alt="Tu Espejo Perfecto">
+                        <div class="proyect-text">
+                            <h3>TuEspejoPerfecto</h3>
+                            <p>
+                                In the summer, my partner and I tried to launch our first venture on Amazon. We searched for a specific niche, and eventually, we chose mirrors. We learned how to use WordPress and researched hosting and SEO to do a good job.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://tuespejoperfecto.com/" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyect-container">
+                    <div class="proyect">
+                        <img src="assets/img/logoDemocratic.jpeg" alt="Tu Espejo Perfecto">
+                        <div class="proyect-text">
+                            <h3>Democratic-City</h3>
+                            <p>    
+                        Democratic CITY is a class project designed to raise awareness about democratic participation. Developed with PHP and JavaScript, it includes a fully developed admin section and the game itself, utilizing regular polling for room creation, question detection, and interaction between users and the host. This project helped strengthen skills in collaboration, organization, and secure database development using PDO.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://26.2daw.esvirgua.com/game/" target="_blank">View Project</a>
+                                <a href="https://github.com/Angel-Guiberteau/ABP-DemocraticCity" target="_blank" class="margin">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyect-container">
+                    <div class="proyect">
+                        <img src="assets/img/pokeAPI.png" alt="Tu Espejo Perfecto">
+                        <div class="proyect-text">
+                            <h3>Poke API</h3>
+                            <p>
+                                As part of a class project, I created a PokéAPI to learn how to work with APIs and manage data effectively. This project helped me deepen my understanding of RESTful API design, handle HTTP requests, and present dynamic information interactively. It was an excellent opportunity to strengthen my backend development abilities in a practical context.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://angel-guiberteau.github.io/PokeAPI/" target="_blank">View Project</a>
+                                <a href="https://github.com/Angel-Guiberteau/PokeAPI" target="_blank" class="margin">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>        
         </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-text">
+                    <h2>Angel Guiberteau</h2>
+                    <p>
+                        As a web developer, I specialize in crafting the user-facing aspects of websites and web applications, contributing to the overall success of the product.
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <h2>Social</h2>
+                    <ul class="example-2">
+                        <li class="icon-content">
+                            <a href="https://www.linkedin.com/in/%C3%A1ngel-guiberteau-franco-84a827311/" aria-label="LinkedIn" data-social="linkedin" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">LinkedIn</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://github.com/Angel-Guiberteau" aria-label="GitHub" data-social="github" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">GitHub</div>
+                        </li>
+                        <li class="icon-content">
+                            <a href="https://www.instagram.com/angel_99sk/" aria-label="Instagram" data-social="instagram" target="_blank">
+                                <div class="filled"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <div class="tooltip">Instagram</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="made">
+                <p>©Copyright 2024. Made by Angel Guiberteau <a href="#navbar" class="come">Come back</a></p>
+            </div>
+        </footer>
+        <script src="assets/scripts/DarkMode.js"></script>
     </body>
 </html>
